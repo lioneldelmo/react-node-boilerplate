@@ -1,0 +1,14 @@
+{
+    "app": {
+        "productTitle": "APRES",
+        "name": "APRES",
+        "version": "1.0",
+        "port": 3000
+    },
+	"api": {
+		"prefix": "/api"
+	}, 
+    "logger": {
+        "level": "debug"
+    }
+}

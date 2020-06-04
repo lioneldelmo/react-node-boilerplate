@@ -1,0 +1,23 @@
+{
+  "name": "apres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+    "postinstall": "cd ./client && npm install && cd ../server && npm install && cd ..",
+    "cmd1": "mkdir -p ./www/",
+    "cmd2": "cp -r ./server/. ./www/",
+    "cmd3": "cp -r ./client/build/. ./www/public/",
+    "deploy": "npm run cmd1 && npm run cmd2 && npm run cmd3",
+    "client_build": "cd client && npm run build && cd ..",
+    "build_deploy": "npm run client_build && npm run deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "dependencies": {}
+}
